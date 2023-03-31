@@ -6,8 +6,10 @@ valor_total = float(input("Informe o valor total da compra: "))
 forma_pagamento = input("Informe a forma de pagamento: ")
 quantidade_produtos = int(input("Informe a quantidade de produtos: "))
 
+pasta = "./recibos/"
+
 # Criando arquivo de texto e escrevendo os dados do recibo fiscal
-with open(nome_arquivo, "w") as arquivo:
+with open(pasta + nome_arquivo, "w") as arquivo:
     arquivo.write("Recibo Fiscal\n\n")
     arquivo.write(f"Nome do cliente: {nome_cliente}\n")
     arquivo.write(f"Data da compra: {data_compra}\n")
